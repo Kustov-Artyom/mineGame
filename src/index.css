@@ -1,0 +1,69 @@
+:root {
+  /* Цветовая схема как на фото */
+  --bg-primary: #0a0e27;
+  --bg-secondary: #1a1f3a;
+  --bg-cell: #0f1535;
+  --bg-cell-hover: #1a2050;
+  --text-primary: #ffd700;
+  --text-secondary: #ffffff;
+  --border-color: #2a3060;
+  --accent: #ff6b35;
+  --accent-hover: #ff8c5a;
+  --success: #4caf50;
+  --error: #f44336;
+  
+  /* Размеры */
+  --header-height: 60px;
+  --cell-min-height: 80px;
+  
+  /* Анимации */
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Утилиты */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  :root {
+    --cell-min-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --cell-min-height: 50px;
+    --header-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --cell-min-height: 40px;
+  }
+}
